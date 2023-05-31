@@ -34,6 +34,7 @@ function App() {
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
         <p>And then that&lsquo;s it</p>
+        <p>This line of coded was added</p>
       </div>
     </>
   );
