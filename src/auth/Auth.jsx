@@ -8,7 +8,6 @@ import {
 import Form from "react-bootstrap/Form";
 const Auth = () => {
   const [signinForms, setSigninForms] = useState({});
-  console.log(auth?.currentUser?.photoURL);
   const handleInputs = (e) => {
     const { name, value } = e.target;
     setSigninForms((prevState) => ({
@@ -45,6 +44,8 @@ const Auth = () => {
       console.error(error);
     }
   };
+
+  console.log(auth?.currentUser?.email);
 
   return (
     <div className="container mt-3">
