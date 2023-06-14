@@ -65,7 +65,7 @@ const Auth = () => {
           name="password"
           value={signinForms.password || ""}
           onChange={handleInputs}
-          placeholder="Password"
+          placeholder="Enter Password here"
           required
         />
         <button type="submit" className="btn btn-primary">
