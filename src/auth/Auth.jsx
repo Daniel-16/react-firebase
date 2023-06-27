@@ -9,6 +9,7 @@ import Form from "react-bootstrap/Form";
 const Auth = () => {
   const [signinForms, setSigninForms] = useState({});
   const handleInputs = (e) => {
+    //Destructured name and value for e.target
     const { name, value } = e.target;
     setSigninForms((prevState) => ({
       ...prevState,
