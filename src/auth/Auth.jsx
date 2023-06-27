@@ -3,6 +3,7 @@ import { auth, googleProvider } from "../../firebase.config";
 import {
   createUserWithEmailAndPassword,
   signInWithPopup,
+  signInWithRedirect,
   signOut,
 } from "firebase/auth";
 import Form from "react-bootstrap/Form";
@@ -46,7 +47,7 @@ const Auth = () => {
     }
   };
 
-  console.log(auth?.currentUser?.email);
+  // console.log(auth?.currentUser?.email);
 
   return (
     <div className="container mt-3">
