@@ -30,7 +30,7 @@ export default function Data() {
       <h1 className="text-center">Admin Dashboard</h1>
       {loading ? (
         <div className="text-center">
-          <div className="spinner-border"></div>
+          <div className="spinner-grow"></div>
         </div>
       ) : (
         users.map((user) => (
