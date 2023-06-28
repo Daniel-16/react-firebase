@@ -28,14 +28,20 @@ export default function Data() {
   return (
     <div className="container">
       <h1 className="text-center">Admin Dashboard</h1>
-      {users.map((user) => (
-        <div className="card mb-2" key={user.id}>
-          <div className="card-body">
-            <h3 className="card-title">{user.name}</h3>
-            <p className="card-text">{user.age}</p>
-          </div>
+      {loading ? (
+        <div className="text-center">
+          <div className="spinner-border"></div>
         </div>
-      ))}
+      ) : (
+        users.map((user) => (
+          <div className="card mb-2" key={user.id}>
+            <div className="card-body">
+              <h3 className="card-title">{user.name}</h3>
+              <p className="card-text">{user.age}</p>
+            </div>
+          </div>
+        ))
+      )}
     </div>
   );
 }
