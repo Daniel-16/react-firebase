@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { db } from "../../firebase.config";
 import { getDocs, collection } from "firebase/firestore";
+import ReactModal from "react-modal";
 
 export default function Data() {
   const [users, setUsers] = useState([]);
@@ -27,25 +28,6 @@ export default function Data() {
     getUser();
   }, []);
 
-  // return (
-  //   <div className="container">
-  //     <h1 className="text-center">Admin Dashboard</h1>
-  //     {loading ? (
-  //       <div className="text-center">
-  //         <div className="spinner-grow"></div>
-  //       </div>
-  //     ) : (
-  //       users.map((user) => (
-  //         <div className="card mb-2" key={user.id}>
-  //           <div className="card-body">
-  //             <h3 className="card-title">{user.name}</h3>
-  //             <p className="card-text">{user.age}</p>
-  //           </div>
-  //         </div>
-  //       ))
-  //     )}
-  //   </div>
-  // );
   if (loading) {
     return (
       <div className="container mt-4 text-center">
